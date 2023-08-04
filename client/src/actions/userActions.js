@@ -113,3 +113,21 @@ export const signUp = (userData, navigate) => async (dispatch) => {
     });
   }
 };
+// export const getMyPlan = (id) => async (dispatch) => {
+//   console.log(id, "ffffffff");
+//   try {
+//     dispatch({
+//       type: constants.GET_MY_PLAN_REQUEST,
+//     });
+//     const { data } = await api.getMyPlan(id);
+//     dispatch({
+//       type: constants.GET_MY_PLAN_SUCCESS,
+//       payload: data.payment,
+//     });
+//   } catch (error) {
+//     dispatch({
+//       type: constants.GET_MY_PLAN_FAILURE,
+//       payload: error,
+//     });
+//   }
+// };

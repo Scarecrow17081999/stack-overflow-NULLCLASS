@@ -13,11 +13,17 @@ import DisplayQuestion from "./pages/DisplayQuestion";
 import UsersProfile from "./pages/UsersProfile";
 import UserProfile from "./pages/UserProfile";
 import TagsPage from "./pages/TagsPage";
+import Subscription from "./pages/Subscription";
+import Payment from "./pages/Payment";
+import PaymentSuccess from "./pages/PaymentSuccess";
+import ChatSupport from "./pages/ChatSupport";
+import ChatMessage from "./components/chat/ChatMessage";
 
 function App() {
   return (
     <>
       <Navbar />
+      <ChatSupport />
       <Routes>
         <Route>
           <Route element={<PublicRoute />}>
@@ -26,6 +32,10 @@ function App() {
             <Route path="/questions" element={<Questions />} />
             <Route path="/questions/:id" element={<DisplayQuestion />} />
             <Route path="/tags" element={<TagsPage />} />
+            <Route path="/subscribe" element={<Subscription />} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path="/paymentsuccess" element={<PaymentSuccess />} />
+            <Route path="/chat" element={<ChatMessage />} />
           </Route>
           <Route element={<PrivateRoute />}>
             <Route path="/users" element={<UserPage />} />

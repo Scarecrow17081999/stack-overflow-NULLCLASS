@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Navbar.scss";
 import decode from "jwt-decode";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import { Avatar } from "@mui/material";
@@ -13,6 +13,8 @@ const Navbar = () => {
   const [myTokenVal, setMyTokenVal] = React.useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log();
   var allcookies = document.cookie;
   useEffect(() => {
     const myCookie = allcookies.split("=");
@@ -50,8 +52,8 @@ const Navbar = () => {
           <Link className="nav-link" to="/">
             Products
           </Link>
-          <Link className="nav-link" to="/">
-            For Teams
+          <Link className="nav-link" to="/subscribe">
+            Change Plan
           </Link>
           <form className="nav-form" action="">
             <SearchIcon />
@@ -67,14 +69,18 @@ const Navbar = () => {
               <Link to="/user">
                 <Avatar />
               </Link>
-              <button onClick={handleLogout} className="nav-button">
+              <button onClick={handleLogout} className="button">
                 Log out
               </button>
             </>
           ) : (
-            <Link to="/auth">
-              <button className="button">Login</button>
-            </Link>
+            <>
+              {!location.pathname == "/auth" && (
+                <Link to="/auth">
+                  <button className="button">Login</button>
+                </Link>
+              )}
+            </>
           )}
         </div>
       </nav>

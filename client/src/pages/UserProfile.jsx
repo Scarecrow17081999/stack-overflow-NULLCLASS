@@ -50,12 +50,13 @@ const UserProfile = () => {
               <div className="user-name">
                 <h1>{User?.name}</h1>
                 <div style={{ display: "flex", alignItems: "center" }}>
-                  <CakeIcon sx={{ margin: "0 1rem 0 0" }} />
+                  <CakeIcon sx={{ margin: "0 1rem 0 0", fontSize: "1.9rem" }} />
                   Joined {moment(User?.joinedOn).fromNow()}
                 </div>
               </div>
             </div>
             <button
+              className="button"
               onClick={() => setViewEdit((prev) => !prev)}
               style={{ height: "fit-content" }}
             >

@@ -1,6 +1,6 @@
 import axios from "axios";
 const API = axios.create({
-  baseURL: "http://localhost:8080/api/v1",
+  baseURL: import.meta.env.VITE_SERVER_URL,
   withCredentials: true,
   headers: {
     "Content-Type": "application/json",
@@ -14,6 +14,7 @@ const API = axios.create({
 //   }
 //   return req;
 // });
+
 // user //
 export const login = (data) => API.post(`/login`, data);
 export const logout = () => API.get(`/logout`);
@@ -34,3 +35,6 @@ export const deleteAnswer = (id, answerData) =>
   API.patch(`/delete/${id}`, answerData);
 export const postAnswer = (id, noOfAnswers, answerBody, userAnswered) =>
   API.patch(`/answer/${id}`, { noOfAnswers, answerBody, userAnswered });
+
+export const payment = (data) => API.post(`/pay`, data);
+export const getMyPlan = (id) => API.get(`/pay`, id);

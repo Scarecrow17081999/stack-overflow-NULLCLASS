@@ -4,7 +4,8 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const questionRoute = require("./routes/questionRoute");
 const answerRoute = require("./routes/answerRoute");
-// const commentRoute = require("./routes/commentRoute");
+const paymentRoute = require("./routes/paymentRoute");
+const chatRoute = require("./routes/chatRoute");
 const userRoute = require("./routes/userRoute");
 const bodyParser = require("body-parser");
 
@@ -21,10 +22,18 @@ app.use(cookieParser());
 // ------------------------------
 /// USING ROUTES ///
 // ------------------------------
+
+// INITILIAZING RAZORPAY //
+
 app.use("/api/v1", questionRoute);
 app.use("/api/v1", answerRoute);
-// app.use("/api/v1", commentRoute);
+app.use("/api/v1", paymentRoute);
+app.use("/api/v1", chatRoute);
+
 app.use("/api/v1", userRoute);
+app.get("/api/v1/getKey", (req, res) => {
+  res.status(200).json({ success: true, key: process.env.RAZORPAY_API_KEY });
+});
 // ------------------------------
 
 // ------------------------------

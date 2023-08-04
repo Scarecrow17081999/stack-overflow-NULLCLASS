@@ -29,7 +29,7 @@ const DisplayQuestion = () => {
   const location = useLocation();
   const { id } = useParams();
   const [answer, setAnswer] = useState("");
-  const url = import.meta.env.VITE_SERVER_URL;
+  const url = import.meta.env.VITE_CLIENT_URL;
   useEffect(() => {
     dispatch(getQuestion(id));
   }, [
@@ -129,7 +129,9 @@ const DisplayQuestion = () => {
                   <div>
                     <button onClick={handleShare}>Share</button>
                     {question?.userId == user?._id && (
-                      <button onClick={handleDelete}>Delete</button>
+                      <button className="button" onClick={handleDelete}>
+                        Delete
+                      </button>
                     )}
                   </div>
                   <div>

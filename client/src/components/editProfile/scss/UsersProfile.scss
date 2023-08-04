@@ -12,6 +12,9 @@
 
 .user-name {
   padding-left: 20px;
+  > * {
+    margin: 1rem 0;
+  }
 }
 .user-name p {
   color: #7e7e7e;
@@ -61,30 +64,30 @@
   height: 30px;
 }
 
-.user-submit-btn {
-  padding: 8px;
-  margin: 1rem 1rem 0 0;
-  border: none;
-  background-color: #0b95fe;
-  color: white;
-  border-radius: 3px;
-  transition: 0.33s;
-  cursor: pointer;
-  &:hover {
-    background-color: #0b95fe66;
-    color: rgb(255, 255, 255);
-  }
-}
+// .user-submit-btn {
+//   padding: 8px;
+//   margin: 1rem 1rem 0 0;
+//   border: none;
+//   background-color: #0b95fe;
+//   color: white;
+//   border-radius: 3px;
+//   transition: 0.33s;
+//   cursor: pointer;
+//   &:hover {
+//     background-color: #0b95fe66;
+//     color: rgb(255, 255, 255);
+//   }
+// }
 
-.user-submit-btn:hover {
-  background-color: #0074cc;
-}
+// .user-submit-btn:hover {
+//   background-color: #0074cc;
+// }
 
-.user-cancel-btn {
-  padding: 14px 10px;
-  color: #0a95ff;
-  background-color: transparent;
-  border: none;
-  margin-left: 10px;
-  cursor: pointer;
-}
+// .user-cancel-btn {
+//   padding: 14px 10px;
+//   color: #0a95ff;
+//   background-color: transparent;
+//   border: none;
+//   margin-left: 10px;
+//   cursor: pointer;
+// }

@@ -43,6 +43,7 @@ const DisplayAnswers = ({
           <button onClick={handleShare}>Share</button>
           {answer?.userId == user?._id && (
             <button
+              className="button"
               onClick={() => handleDelete(answer._id, question?.noOfAnswers)}
             >
               Delete

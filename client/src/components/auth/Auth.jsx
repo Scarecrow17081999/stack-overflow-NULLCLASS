@@ -122,7 +122,9 @@ const Auth = () => {
                   </small>
                 </label>
               )}
-              <button type="submit">{!isSignUp ? "Login" : "Sign Up"}</button>
+              <button className="button" type="submit">
+                {!isSignUp ? "Login" : "Sign Up"}
+              </button>
               {isSignUp && (
                 <TermsAndServices>
                   {" "}

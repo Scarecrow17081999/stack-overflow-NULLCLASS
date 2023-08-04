@@ -32,9 +32,9 @@ router.route("/users").get(isAuthenticated, getAllUsersProfile);
 router.route("/my/posts").get(isAuthenticated, getMyPosts);
 router.route("/forgot/password").post(forgotPassword);
 router.route("/password/reset/:token").put(resetPassword);
-router
-  .route("/post/comment/:id")
-  .put(isAuthenticated, addComment)
-  .delete(isAuthenticated, deleteComment);
+// router
+//   .route("/post/comment/:id")
+//   .put(isAuthenticated, addComment)
+//   .delete(isAuthenticated, deleteComment);
 
 module.exports = router;

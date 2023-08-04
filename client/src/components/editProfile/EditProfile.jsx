@@ -60,14 +60,19 @@ const EditProfile = ({ setViewEdit, User }) => {
             placeHolder="Add Tags..."
           />
         </label>
-        <input
+        {/* <button
           type="submit"
           value={"Save Profile"}
           className="user-submit-btn"
-        />
-        <button type="button" style={{ color: "white" }}>
-          Cancel
+        /> */}
+        <button
+          className="button"
+          style={{ backgroundColor: "#0b95fe", margin: "1rem 1rem 0 0" }}
+          type="submit"
+        >
+          Save Profile
         </button>
+        <button>Cancel</button>
       </form>
     </div>
   );

@@ -299,7 +299,7 @@ exports.deleteProfile = async (req, res) => {
 
 exports.myProfile = async (req, res) => {
   try {
-    const user = await User.findById(req.user._id);
+    const user = await User.findById(req.user._id).populate("payments");
 
     res.status(200).json({
       success: true,

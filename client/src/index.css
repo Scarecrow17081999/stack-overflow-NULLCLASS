@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -10,14 +14,14 @@ a {
   color: black;
 }
 
-button {
+.button {
   padding: 8px;
   border: none;
-  background-color: #0b95fe;
   color: white;
   border-radius: 3px;
   transition: 0.33s;
   cursor: pointer;
+  background-color: #0b95fe !important;
   &:hover {
     background-color: #0074cc;
     color: black;

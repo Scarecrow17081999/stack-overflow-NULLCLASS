@@ -92,11 +92,11 @@
 .rti--container {
   margin: 1rem 0 0 0 !important;
 }
-.button {
+/* .button {
   max-width: fit-content;
   margin: 10px 0px;
-}
+} */
 
-button:hover {
+/* .button:hover {
   background-color: #053086;
-}
+} */

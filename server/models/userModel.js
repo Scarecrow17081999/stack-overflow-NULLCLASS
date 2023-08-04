@@ -35,7 +35,16 @@ const userSchema = mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-
+  isSubscribed: {
+    type: Boolean,
+    default: false,
+  },
+  payments: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Payment",
+    },
+  ],
   resetPasswordToken: {
     type: String,
     select: false,

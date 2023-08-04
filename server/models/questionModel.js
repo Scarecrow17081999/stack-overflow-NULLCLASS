@@ -32,7 +32,7 @@ const questionSchema = new mongoose.Schema({
   userId: { type: String },
   askedOn: {
     type: Date,
-    default: Date.now,
+    default: new Date(Date.now()),
   },
   answer: [
     {
