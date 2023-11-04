@@ -24,7 +24,9 @@ app.use(cookieParser());
 // ------------------------------
 
 // INITILIAZING RAZORPAY //
-
+app.get("/", (req, res) => {
+  res.json({ success: true, message: "Hello World!" });
+});
 app.use("/api/v1", questionRoute);
 app.use("/api/v1", answerRoute);
 app.use("/api/v1", paymentRoute);
