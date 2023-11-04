@@ -4,6 +4,7 @@ import HomeMainBar from "../components/home/HomeMainBar.jsx";
 import RightSideBar from "../components/rightSideBar/RightSideBar.jsx";
 import { useSelector } from "react-redux";
 import LoaderFunc from "../components/loader/Loader";
+import Footer from "../components/footer/Footer";
 
 const HomePage = () => {
   const loading = "";
@@ -17,12 +18,15 @@ const HomePage = () => {
       {loading ? (
         <LoaderFunc />
       ) : (
-        <div className="home-containers">
-          <LeftSideBar />
-          <div className="home-container-1">
-            <HomeMainBar />
-            <RightSideBar />
+        <div>
+          <div className="home-containers">
+            <LeftSideBar />
+            <div className="home-container-1">
+              <HomeMainBar />
+              <RightSideBar />
+            </div>
           </div>
+          {/* <Footer /> */}
         </div>
       )}
     </>
